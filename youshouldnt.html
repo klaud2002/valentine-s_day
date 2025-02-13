@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine Question</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <audio id="background-music">
+      <source src="huh.mp3" type="audio/mp3" />
+      Your browser does not support the audio tag.
+    </audio>
+
+    <button id="playButton" onclick="playMusic()">🎵 PLAY</button>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>YOU SHOULDN'T!!!!!! You should feel guilty!</h1>
+    <img src="what.jpg" alt="Whaat cat" />
+    <br />
+    <a href="why.html"><button>Whaaat?</button></a>
+    <script>
+      function playMusic() {
+        const music = document.getElementById("background-music");
+        const playButton = document.getElementById("playButton");
+
+        if (music.paused) {
+          music.play();
+          playButton.textContent = "🔇 TURN OFF";
+        } else {
+          music.pause();
+          playButton.textContent = "🎵 PLAY";
+        }
+      }
+    </script>
+  </body>
+</html>
